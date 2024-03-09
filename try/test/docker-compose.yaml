@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  upload-file-level-1:
+    build: ./test
+    restart: unless-stopped
+    ports:
+      - "12001:80"
+    volumes:
+      - ./test/src:/var/www/html
+      - /var/www/html/upload
